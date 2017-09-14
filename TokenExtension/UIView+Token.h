@@ -86,7 +86,7 @@ typedef __kindof UIButton * (^TokenButtonTargetBlock)(id target,SEL action ,UICo
 @property (nonatomic ,copy ,readonly) TokenButtonSetColorBlock             token_setTitleColorWithState;
 @property (nonatomic ,copy ,readonly) TokenButtonSetImageBlock             token_setImageWithState;
 @property (nonatomic ,copy ,readonly) TokenButtonSetImageBlock             token_setBackgroundImageWithState;
-@property (nonatomic ,copy ,readonly) TokenButtonTargetBlock token_addTarget;
+@property (nonatomic ,copy ,readonly) TokenButtonTargetBlock               token_addTarget;
 @end
 
 
