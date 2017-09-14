@@ -77,6 +77,8 @@ typedef __kindof UIButton *(^TokenButtonsetAttributedTitleBlock)(NSAttributedStr
 typedef __kindof UIButton *(^TokenButtonSetColorBlock)(UIColor *titleColor,UIControlState state);
 typedef __kindof UIButton *(^TokenButtonSetImageBlock)(UIImage *image,UIControlState state);
 
+typedef __kindof UIButton * (^TokenButtonTargetBlock)(id target,SEL action ,UIControlEvents controlEvents);
+
 @interface UIButton (Token)
 @property (nonatomic ,copy ,readonly,class) TokenButtonTypeInstanceBlock   token_buttonWithType;
 @property (nonatomic ,copy ,readonly) TokenButtonSetTitleBlock             token_setTitleWithState;
@@ -84,6 +86,7 @@ typedef __kindof UIButton *(^TokenButtonSetImageBlock)(UIImage *image,UIControlS
 @property (nonatomic ,copy ,readonly) TokenButtonSetColorBlock             token_setTitleColorWithState;
 @property (nonatomic ,copy ,readonly) TokenButtonSetImageBlock             token_setImageWithState;
 @property (nonatomic ,copy ,readonly) TokenButtonSetImageBlock             token_setBackgroundImageWithState;
+@property (nonatomic ,copy ,readonly) TokenButtonTargetBlock token_addTarget;
 @end
 
 
